@@ -22,12 +22,11 @@ const Home: NextPage = () => {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.tsx</code>
+          Star Wars Da Dum 
         </p>
 
         <div className={styles.grid}>
-          <Link href='/characters'> 
+          <Link href='/people'> 
           <a className={styles.card}>
             <h2>People &rarr;</h2>
             <p>View the People</p>

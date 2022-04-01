@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import { GetStaticProps, NextPage } from 'next'
-import { People, GetPeopleResults } from '../types'
+import { People, GetPeopleResults } from '../../types'
 
 const Characters: NextPage<{people: Person[]}> = ({people}) => {
 
  return (
-    <div>
+    <div className='characterPage'>
      
        {people.map(person => (
          <div key={person.name}>
@@ -16,9 +16,11 @@ const Characters: NextPage<{people: Person[]}> = ({people}) => {
             <p>Hair Color: {person.hair_color}</p>
           </div>
        ))}
+
       <Link href="/">
-        <a>Back Home &rarr;</a>
+        <a>Go Back Home &rarr;</a>
       </Link>
+
     </div>
   )
 
