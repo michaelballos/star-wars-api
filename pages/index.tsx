@@ -27,7 +27,7 @@ const Home: NextPage = () => {
         </p>
 
         <div className={styles.grid}>
-          <Link href='/people'> 
+          <Link href='/characters'> 
           <a className={styles.card}>
             <h2>People &rarr;</h2>
             <p>View the People</p>
