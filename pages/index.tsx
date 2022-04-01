@@ -34,29 +34,29 @@ const Home: NextPage = () => {
           </Link>
 
 
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h2>Learn &rarr;</h2>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
+          <Link href='/planets'> 
+          <a className={styles.card}>
+            <h2>Planets &rarr;</h2>
+            <p>View the Planets</p>
+         </a>
+          </Link>
 
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h2>Examples &rarr;</h2>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
+          <Link href=''> 
+          <a className={styles.card}>
+            <h2>Species &rarr;</h2>
+            <p>View the Species</p>
+         </a>
+          </Link>
 
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h2>Deploy &rarr;</h2>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+
+          <Link href=''> 
+          <a className={styles.card}>
+            <h2>Vehicles &rarr;</h2>
+            <p>View the Vehicles</p>
+         </a>
+          </Link>
+
+       </div>
       </main>
 
       <footer className={styles.footer}>

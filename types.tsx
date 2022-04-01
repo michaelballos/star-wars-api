@@ -2,13 +2,13 @@ export interface GetPeopleResults {
   info: Info;
   results: Person[];
 }
-
 export interface Info {
   count: number;
   pages: number;
   next: string;
   prev: null;
 }
+
 export interface Person {
   name: string;
   height: string;
@@ -32,6 +32,11 @@ export enum Gender {
   Female = "female",
   Male = "male",
   NA = "n/a",
+}
+
+export interface GetPlanetResults {
+  info: Info;
+  results: Planet[];
 }
 
 export interface Planet {

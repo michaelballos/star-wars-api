@@ -4,9 +4,7 @@ import { GetPeopleResults, Person } from '../../types'
 
 const Characters: NextPage<{people: Person[]}> = ({people}) => {
 
- return (
-    <div className='characterPage'>
-       {people.map(person => (
+  const peopleList = people.map(person => (
          <div key={person.name}>
            <Link href={`/people/${person.name}`}>
              <h1>
@@ -14,13 +12,18 @@ const Characters: NextPage<{people: Person[]}> = ({people}) => {
              </h1>
             </Link>
           </div>
-       ))}
-      <Link href="/">
-        <a>Go Back Home &rarr;</a>
-      </Link>
+       ))
+
+ return (
+    <div className='characterPage'>
+      {peopleList}
+    <Link href="/">
+      <a>
+        Go Back Home &rarr;
+      </a>
+    </Link>
     </div>
   )
-
 }
 
 export const getStaticProps: GetStaticProps = async (context) => {
