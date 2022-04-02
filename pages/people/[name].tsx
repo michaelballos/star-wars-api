@@ -1,7 +1,6 @@
 import { NextPage, GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
-import Characters from '.';
-import { GetPeopleResults, Person } from '../../types';
+import { GetPeopleResults } from '../../types';
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const res = await fetch('https://swapi.dev/api/people/')
@@ -18,7 +17,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await fetch('https://swapi.dev/api/people/');
   const { results }: GetPeopleResults = await res.json();
-
   const paths = results.map(person => ({
     params: {
       name: person.name,

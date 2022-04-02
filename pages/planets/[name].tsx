@@ -1,7 +1,19 @@
-import { GetStaticPaths, NextPage } from 'next';
+import { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { useRouter } from 'next/router';
 import { GetPlanetResults } from '../../types';
-/*
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const res = await fetch('https://swapi.dev/api/planets/');
+  const { results }: GetPlanetResults = await res.json();
+
+  return {
+    props: {
+      planets: results,
+    },
+  }
+  
+}
+
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await fetch('https://swapi.dev/api/planets/');
   const  {results}: GetPlanetResults = await res.json();
@@ -12,22 +24,20 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   }
   ))
-  console.log(paths)
+
   return {
     paths,
     fallback: false,
   }
 }
 
-*/
 const HabitatDetails: NextPage = () => {
-/*
   const router = useRouter();
-  const  { planet }  = router.query;
-*/
+  const  { name }  = router.query;
+
   return (
     <div className="planet">
-      <h1> planet </h1>
+      <h1>{ name }</h1>
     </div>
   );
 };

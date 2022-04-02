@@ -14,18 +14,19 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
 }
 
-const Characters: NextPage<{people: Person[]}> = ({people}) => {
-  console.log(getStaticProps);
+const Characters: NextPage<{people: Person[]}> = ({ people }) => {
   const peopleList = people.map(person => (
          <div key={person.name}>
            <Link href={`/people/${person.name}`}>
              <h1>
-            <a>{person.name}</a>
+               <a>
+                 {person.name}
+               </a>
              </h1>
             </Link>
           </div>
        ))
-
+    console.log(peopleList);
  return (
     <div className='characterPage'>
       {peopleList}
