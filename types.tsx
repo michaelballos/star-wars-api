@@ -2,6 +2,7 @@ export interface GetPeopleResults {
   info: Info;
   results: Person[];
 }
+
 export interface Info {
   count: number;
   pages: number;

@@ -3,8 +3,7 @@ import Link from 'next/link';
 import { GetStaticProps, NextPage } from 'next';
 import { GetPlanetResults, Planet } from '../../types';
 
-const Planets: NextPage<{ planets: Planet[] }> = ({ planets }) => {
-
+const Habitat: NextPage<{ planets: Planet[] }> = ({ planets }) => {
 /*
   const planetList = planets.map(planet => (
     <div key={planet.name}>
@@ -18,11 +17,11 @@ const Planets: NextPage<{ planets: Planet[] }> = ({ planets }) => {
     </div>
   ));
 */
-
   return (
     <div className="planetsPage">
 
-      {JSON.stringify(planets)}
+    /*
+     planetList*/
 
     <Link href='/'>
       <a>
@@ -33,11 +32,11 @@ const Planets: NextPage<{ planets: Planet[] }> = ({ planets }) => {
   )
 }
 
-
+/*
 export const getStaticProps: GetStaticProps = async (context) => {
   const res = await fetch('https://swapi.dev/api/planets/');
   const { results }: GetPlanetResults = await res.json();
-  console.log(results);
+
   return {
     props: {
       planets: results,
@@ -45,5 +44,6 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
   
 }
+*/
 
-export default Planets
+export default Habitat

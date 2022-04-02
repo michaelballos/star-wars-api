@@ -1,6 +1,19 @@
-import { NextPage, GetStaticPaths } from 'next';
+import { NextPage, GetStaticPaths, GetStaticProps } from 'next';
 import { useRouter } from 'next/router';
+import Characters from '.';
 import { GetPeopleResults, Person } from '../../types';
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const res = await fetch('https://swapi.dev/api/people/')
+  const { results }: GetPeopleResults = await res.json()
+
+  return {
+    props: {
+      people: results,
+    },
+  }
+
+}
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const res = await fetch('https://swapi.dev/api/people/');
@@ -14,15 +27,26 @@ export const getStaticPaths: GetStaticPaths = async () => {
   ))
 
   return {
-    paths,
-    fallback: false,
-  }
+      paths,
+      fallback: false,
+    }
+  
 }
+
 
 const CharacterDetails: NextPage = () => {
   const router = useRouter();
   const { name } = router.query;
-  return <h1>Person Details{name}</h1>
+
+  return (
+    <div className="character">
+      <h1>{name}</h1>
+      <ul>
+        <li>
+        </li>
+      </ul>
+    </div>
+  )
 }
 
 export default CharacterDetails;
