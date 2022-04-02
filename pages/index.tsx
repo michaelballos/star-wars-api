@@ -29,7 +29,7 @@ const Home: NextPage = () => {
           <Link href='/people'> 
           <a className={styles.card}>
             <h2>People &rarr;</h2>
-            <p>View the People</p>
+            <p>Read About The People</p>
           </a>
           </Link>
 
@@ -37,14 +37,14 @@ const Home: NextPage = () => {
           <Link href='/planets'> 
           <a className={styles.card}>
             <h2>Planets &rarr;</h2>
-            <p>View the Planets</p>
+            <p>Read About The Planets</p>
          </a>
           </Link>
 
           <Link href=''> 
           <a className={styles.card}>
             <h2>Species &rarr;</h2>
-            <p>View the Species</p>
+            <p>Read About The Species</p>
          </a>
           </Link>
 
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
           <Link href=''> 
           <a className={styles.card}>
             <h2>Vehicles &rarr;</h2>
-            <p>View the Vehicles</p>
+            <p>Read About The Vehicles</p>
          </a>
           </Link>
 
