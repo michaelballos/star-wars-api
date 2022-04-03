@@ -7,10 +7,12 @@ export default function About() {
       <Head>
         <title>Trolled</title>
       </Head>
-      <h1>Fuck You</h1>
-        <p>
+      <video width='320' height='240' autoPlay muted>
+        <source src='../../public/media/rickRoll.mp4' type='video/mp4' />
+      </video>
+        <h1>
           Got Milk?
-        </p>
+        </h1>
       <h2>
         <Link href="/">
           <a>Back Home &rarr;</a>

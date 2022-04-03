@@ -26,7 +26,6 @@ const Characters: NextPage<{people: Person[]}> = ({ people }) => {
             </Link>
           </div>
        ))
-    console.log(peopleList);
  return (
     <div className='characterPage'>
       {peopleList}
